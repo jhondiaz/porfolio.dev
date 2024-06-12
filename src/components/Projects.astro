@@ -19,20 +19,35 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "LMC Home Health y Identity Services",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
+      "Plataforma   de captura y procesamiento de datos en medico , estructurada con arquitectura de microservicio con el modelo hexagonal, Utilizamos tecnologías .Net Core, Angular -Tailwind CSS, Sql Server, OpenId .",
+    link: "https://leonmedicalcenters.com/service/servicios-especializados/salud-en-el-hogar/?lang=es",
+    image: "/leon.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Agente hack-inn",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
+      "Plataforma de Captura de datos en tiempo real y procesamiento con IA, para la predicción de   procesos repetitivos, estructurada con arquitectura de  capa  y cliente  servidos con el modelo hexagonal, Utilizamos tecnologías .Net Core, Angular, Sql Server, Jwt, Api- RestFull.",
+    link: "https://www.hack-inn.com/",
+    image: "/hk.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "Plataform de Smart City",
+    description:
+      "Plataforma de análisis de datos y procesamiento IA, Predicción y modela de comportamiento vial de las ciudades, estructurada con arquitectura de microservicio y cliente servidos con el modelo hexagonal, Utilizamos tecnologías  fiware,Angular, PostGresQL, Jwt, MQTT.",
+    link: "https://and.gov.co/",
+    image: "/and.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "Plataform de Tdriver",
+    description:
+      "Solución completa de software de taxis como Uber para su negocio de despacho de taxis,  estructurada con arquitectura de microservicio con el modelo hexagonal, Utilizamos tecnologías .Net Core, Angular, Sql Server, Android , Flutter.",
+    link: "https://tdriver.co/",
+    image: "https://tdriver.co/wp-content/imagen/Platform-Img.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
 ]
@@ -40,7 +55,7 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -68,13 +83,7 @@ const PROJECTS = [
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
+       
           {link && (
             <LinkButton href={link}>
               <Link class="size-4" />
